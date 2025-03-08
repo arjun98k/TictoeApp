@@ -1,6 +1,7 @@
 package com.example.tictactoegame
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
         fun init() {
             val bt1: Button = findViewById(R.id.bt1)
             val bt2: Button = findViewById(R.id.bt2)
@@ -24,6 +26,7 @@ class MainActivity : AppCompatActivity() {
             val bt9: Button = findViewById(R.id.bt9)
 
         }
+        init()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -33,5 +36,23 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+
+    }
+
+    public fun check(view: View) {
+        var flags = 0
+        var count = 0
+        count++
+        val btncurrent = view as Button
+        if (flags == 0){
+            btncurrent.setText("X")
+            flags = 1
+
+        }else{
+            btncurrent.setText("O")
+            flags = 0
+        }
+
+        
     }
 }
