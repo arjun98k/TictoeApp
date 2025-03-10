@@ -18,18 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-//        fun init() {
-//            val bt1: Button = findViewById(R.id.bt1)
-//            val bt2: Button = findViewById(R.id.bt2)
-//            val bt3: Button = findViewById(R.id.bt3)
-//            val bt4: Button = findViewById(R.id.bt4)
-//            val bt5: Button = findViewById(R.id.bt5)
-//            val bt6: Button = findViewById(R.id.bt6)
-//            val bt7: Button = findViewById(R.id.bt7)
-//            val bt8: Button = findViewById(R.id.bt8)
-//            val bt9: Button = findViewById(R.id.bt9)
-//
-//        }
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -145,6 +134,9 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText( this,"Winner", Toast.LENGTH_SHORT).show()
                 restart()
 
+            } else if (count == 9){
+                Toast.makeText( this,"Draw", Toast.LENGTH_SHORT).show()
+                restart()
             }
 
         }
